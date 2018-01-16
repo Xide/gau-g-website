@@ -1,0 +1,11 @@
+language: node_js
+node_js:
+- '7'
+build:
+- npm run build:prod
+
+script: bash ./.travis/deploy.sh
+env:
+  global:
+  - ENCRYPTION_LABEL: "f0af82f2bfd9"
+  - COMMIT_AUTHOR_EMAIL: "germain.gau@gmail.com"
