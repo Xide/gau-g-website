@@ -1,16 +1,11 @@
 language: node_js
 node_js:
-  - "7"
-
+- '7'
 build:
-  - npm run build:prod
+- npm run build:prod
 
-deploy:
-  provider: pages
-  target-branch: gh-pages
-  skip-cleanup: true
-  github-token: $GITHUB_TOKEN  # Set in travis-ci.org dashboard, marked secure
-  keep-history: true
-  local-dir: dist
-  on:
-    branch: master
+script: bash ./.travis/deploy.sh
+env:
+  global:
+  - ENCRYPTION_LABEL: "f0af82f2bfd9"
+  - COMMIT_AUTHOR_EMAIL: "germain.gau@gmail.com"
