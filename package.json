@@ -2,11 +2,13 @@
   "name": "gau-g-website",
   "version": "0.0.1",
   "description": "My personnal website",
+  "repository": "https://github.com/Xide/gau-g-website",
   "main": "index.js",
   "scripts": {
     "start": "npm run start:dev",
     "start:dev": "./node_modules/.bin/webpack-dev-server -d --watch",
     "start:prod": "NODE_ENV=production ./node_modules/.bin/webpack -p --watch",
+    "build:prod": "NODE_ENV=production ./node_modules/.bin/webpack -p",
     "lint": "./node_modules/.bin/eslint src/**"
   },
   "author": "Germain GAU",
